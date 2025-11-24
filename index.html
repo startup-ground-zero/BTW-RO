@@ -18,11 +18,13 @@
         }
 
         :root {
-            --bmw-blue: #1C69D4;
+            --bmw-orange: #FF6B35;
+            --bmw-coral: #FF8C42;
             --bmw-dark: #1A1A1A;
+            --bmw-dark-gray: #2C2C2C;
             --bmw-gray: #666666;
             --bmw-light-gray: #F4F4F4;
-            --ntt-blue: #0067B1;
+            --bmw-white: #FFFFFF;
         }
 
         body {
@@ -70,14 +72,14 @@
         .logo-bmw {
             width: 50px;
             height: 50px;
-            background: var(--bmw-blue);
-            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-weight: 900;
-            font-size: 1.2rem;
+        }
+
+        .logo-bmw img {
+            width: 100%;
+            height: auto;
         }
 
         .nav-links {
@@ -103,7 +105,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--bmw-blue);
+            background: var(--bmw-orange);
             transition: width 0.3s ease;
         }
 
@@ -112,7 +114,7 @@
         }
 
         .nav-links a:hover {
-            color: var(--bmw-blue);
+            color: var(--bmw-orange);
         }
 
         .mobile-toggle {
@@ -136,7 +138,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #1C69D4 0%, #0067B1 100%);
+            background: linear-gradient(135deg, var(--bmw-dark) 0%, var(--bmw-dark-gray) 100%);
             color: white;
             text-align: center;
             padding: 2rem;
@@ -208,13 +210,14 @@
         }
 
         .btn-primary {
-            background: white;
-            color: var(--bmw-blue);
+            background: var(--bmw-orange);
+            color: white;
         }
 
         .btn-primary:hover {
+            background: var(--bmw-coral);
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
         }
 
         .btn-outline {
@@ -224,8 +227,9 @@
         }
 
         .btn-outline:hover {
-            background: white;
-            color: var(--bmw-blue);
+            background: var(--bmw-orange);
+            color: white;
+            border-color: var(--bmw-orange);
         }
 
         /* Section Styles */
@@ -285,7 +289,7 @@
         .about-card h3 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
-            color: var(--bmw-blue);
+            color: var(--bmw-orange);
         }
 
         .about-card p {
@@ -317,7 +321,7 @@
             left: 0;
             width: 5px;
             height: 100%;
-            background: var(--bmw-blue);
+            background: var(--bmw-orange);
             transform: scaleY(0);
             transition: transform 0.3s ease;
         }
@@ -328,8 +332,8 @@
 
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 50px rgba(28, 105, 212, 0.15);
-            border-color: var(--bmw-blue);
+            box-shadow: 0 20px 50px rgba(255, 107, 53, 0.15);
+            border-color: var(--bmw-orange);
         }
 
         .service-icon {
@@ -365,7 +369,7 @@
             content: '✓';
             position: absolute;
             left: 0;
-            color: var(--bmw-blue);
+            color: var(--bmw-orange);
             font-weight: bold;
         }
 
@@ -385,7 +389,7 @@
 
         .stat-item h3 {
             font-size: 3.5rem;
-            color: var(--bmw-blue);
+            color: var(--bmw-orange);
             margin-bottom: 0.5rem;
             font-weight: 700;
         }
@@ -437,7 +441,7 @@
 
         /* Careers Section */
         .careers-highlight {
-            background: linear-gradient(135deg, var(--bmw-blue) 0%, var(--ntt-blue) 100%);
+            background: linear-gradient(135deg, var(--bmw-orange) 0%, var(--bmw-coral) 100%);
             color: white;
             padding: 4rem 3rem;
             border-radius: 20px;
@@ -481,7 +485,7 @@
         .contact-item h4 {
             font-size: 1.1rem;
             margin-bottom: 0.5rem;
-            color: var(--bmw-blue);
+            color: var(--bmw-orange);
             font-weight: 600;
         }
 
@@ -491,7 +495,7 @@
         }
 
         .contact-item a {
-            color: var(--bmw-blue);
+            color: var(--bmw-orange);
             text-decoration: none;
         }
 
@@ -533,7 +537,7 @@
         .form-group textarea:focus,
         .form-group select:focus {
             outline: none;
-            border-color: var(--bmw-blue);
+            border-color: var(--bmw-orange);
         }
 
         .form-group textarea {
@@ -543,7 +547,7 @@
 
         .btn-submit {
             width: 100%;
-            background: var(--bmw-blue);
+            background: var(--bmw-orange);
             color: white;
             border: none;
             padding: 1.2rem;
@@ -555,9 +559,9 @@
         }
 
         .btn-submit:hover {
-            background: var(--ntt-blue);
+            background: var(--bmw-coral);
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(28, 105, 212, 0.3);
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
         }
 
         /* Footer */
@@ -578,7 +582,7 @@
         .footer-section h4 {
             font-size: 1.3rem;
             margin-bottom: 1.5rem;
-            color: var(--bmw-blue);
+            color: var(--bmw-orange);
         }
 
         .footer-section ul {
@@ -617,7 +621,7 @@
         }
 
         .social-links a:hover {
-            background: var(--bmw-blue);
+            background: var(--bmw-orange);
             transform: translateY(-3px);
         }
 
@@ -719,7 +723,7 @@
             top: 0;
             left: 0;
             height: 4px;
-            background: var(--bmw-blue);
+            background: var(--bmw-orange);
             z-index: 9999;
             transition: width 0.1s ease;
         }
@@ -733,7 +737,9 @@
     <nav id="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
-                <div class="logo-bmw">BMW</div>
+                <div class="logo-bmw">
+                    <img src="https://www.bmw.com/etc/designs/bmwcom/img/bmw-logo.svg" alt="BMW Logo">
+                </div>
                 TechWorks Romania
             </a>
             <div class="mobile-toggle" onclick="toggleMenu()">
@@ -1031,10 +1037,10 @@
                     <div class="contact-item">
                         <h4>🌐 Follow Us</h4>
                         <div class="social-links" style="margin-top: 1rem;">
-                            <a href="https://www.linkedin.com/company/bmw-techworks-romania/" target="_blank" style="width: 45px; height: 45px; background: var(--bmw-blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-weight: bold;">in</a>
-                            <a href="https://www.facebook.com/BMWTechWorks/" target="_blank" style="width: 45px; height: 45px; background: var(--bmw-blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-weight: bold;">f</a>
-                            <a href="https://www.instagram.com/bmwtechworks" target="_blank" style="width: 45px; height: 45px; background: var(--bmw-blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-weight: bold;">📷</a>
-                            <a href="https://www.youtube.com/@BMWTechWorks" target="_blank" style="width: 45px; height: 45px; background: var(--bmw-blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-weight: bold;">▶</a>
+                            <a href="https://www.linkedin.com/company/bmw-techworks-romania/" target="_blank" style="width: 45px; height: 45px; background: var(--bmw-orange); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-weight: bold;">in</a>
+                            <a href="https://www.facebook.com/BMWTechWorks/" target="_blank" style="width: 45px; height: 45px; background: var(--bmw-orange); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-weight: bold;">f</a>
+                            <a href="https://www.instagram.com/bmwtechworks" target="_blank" style="width: 45px; height: 45px; background: var(--bmw-orange); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-weight: bold;">📷</a>
+                            <a href="https://www.youtube.com/@BMWTechWorks" target="_blank" style="width: 45px; height: 45px; background: var(--bmw-orange); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-weight: bold;">▶</a>
                         </div>
                     </div>
                 </div>
@@ -1087,8 +1093,8 @@
                 </p>
                 <div class="partners">
                     <span style="color: white; font-weight: 600;">Part of:</span>
-                    <span style="color: var(--bmw-blue); font-weight: 700; font-size: 1.2rem;">BMW Group</span>
-                    <span style="color: var(--ntt-blue); font-weight: 700; font-size: 1.2rem;">NTT DATA</span>
+                    <span style="color: var(--bmw-orange); font-weight: 700; font-size: 1.2rem;">BMW Group</span>
+                    <span style="color: var(--bmw-coral); font-weight: 700; font-size: 1.2rem;">NTT DATA</span>
                 </div>
             </div>
 
